@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar >
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title >{{params}}</ion-title>
+    
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+  <ion-grid>
+    <ion-row > 
+      <ion-col col-12 col-md-12 col-lg-12 >
+        <ion-card  box-shadow (click)="openPage(item)" *ngFor="let item of listData" >
+
+          <ion-card-content>                                           
+            <div float-left class="card-img">
+
+              <img item-left images-filter src="{{item.linkImage}}" />
+              
+            </div> 
+            
+            <div class="front" float-left>
+              <h1 card-title >{{item.tieuDe}}</h1>
+              <h3 card-subtitle>
+                <ion-icon no-padding name="alarm" item-right></ion-icon>{{item.ngayPhatHanh}}
+              </h3>
+            </div>
+          </ion-card-content>
+        </ion-card>
+        <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+          <ion-infinite-scroll-content></ion-infinite-scroll-content>
+        </ion-infinite-scroll>
+        <!-- <div float-right *ngIf="last!=0"> -->
+          <!-- <table class="home-table">
+            <tr>
+          <td><button *ngIf="now>2" (click)="goPage(1)"><ion-icon name="rewind"></ion-icon></button></td>
+          <td><button *ngIf="now>=2" (click)="goPage(now-1)"><ion-icon></ion-icon>{{back}}</button></td>
+          <td><button class="now-page">{{now}}</button></td>
+          <td><button *ngIf="now<=last" (click)="goPage(now+1)">{{next}}</button></td>
+          <td><button *ngIf="now<=last-2" (click)="goPage(last+0.5)" ><ion-icon name="fastforward"></ion-icon></button></td>
+        </tr>
+        </table> -->
+        <!-- </div> -->
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

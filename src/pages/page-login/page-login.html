@@ -1,0 +1,34 @@
+<ion-content white-background>
+  <ion-grid>
+      <ion-row wrap padding >
+          <ion-col col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6>
+              <button ion-button button-clear clear (click)="SkipPage()">Skip</button>
+              <!-- <img padding-bottom [src]="data.logo" *ngIf="data.logo != null"> -->
+              <ion-item transparent>
+                  <ion-label floating>username</ion-label>
+                  <ion-input placeholder="Username" required type="text" [(ngModel)]="username"></ion-input>
+                  <ion-label error-field color="secondary" no-margin *ngIf="!isUsernameValid">error</ion-label>
+              </ion-item>
+              <ion-item transparent>
+                  <ion-label floating>password</ion-label>
+                  <ion-input placeholder="Password" required type="password" [(ngModel)]="password"></ion-input>
+                  <ion-label error-field color="secondary" no-margin *ngIf="!isPasswordValid">error</ion-label>
+              </ion-item>
+              <button ion-button float-left button-clear-outline round outline (click)="getData()">Login</button>
+
+              <!-- <p>data show:{{okeoke}}{{datadata}} {{dataheader}}{{password}}</p> -->
+              <!-- <button ion-button float-left button-clear-outline round outline (click)="onEvent('onRegister')">Register</button> -->
+          </ion-col>
+          <!-- <ion-col col-12 col-sm-12 col-md-12 offset-lg-3 col-lg-6 offset-xl-3 col-xl-6 social>
+              <button ion-button round outline color="facebook" (click)="onEvent('onFacebook')">Facebook</button>
+              <button ion-button round outline color="twitter" (click)="onEvent('onTwitter')">Twitter</button>
+              <button ion-button round outline color="google" (click)="onEvent('onGoogle')">Google</button>
+              <button ion-button round outline color="pinterest" (click)="onEvent('onPinterest')">Pinterest</button>
+          </ion-col> -->
+      </ion-row>
+  </ion-grid>
+  <p>check: {{check}}</p>
+  <p>status: {{status}}</p>
+  <p>hearder: {{header}}</p>
+  <p>data: {{data}}</p>
+</ion-content>

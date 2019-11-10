@@ -1,0 +1,46 @@
+.item-notification{
+    width: 100%;
+}
+.item-notification:hover .content-notification{
+    font-weight: bold;
+}
+.item-content:hover{
+  background: #D8D8D8;
+}
+.item-notification h3{
+    padding-left: 10px;
+}
+.item-notification p{
+    padding-right: 10px;
+}
+.content-notification{
+    font-family: Arial;
+    font-style: bold;
+}
+.date-notification{    
+    position: relative;
+    float: right;
+    
+}
+
+  
+  /* The element to apply the animation to */
+  .item-notification {
+    // animation-name: fadeInLeft;
+    // animation-duration: 3s;
+    animation: fadeInLeft 0.5s linear;
+    animation-fill-mode: both;
+  }
+
+  @keyframes inLeft {
+    from {
+      -webkit-transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+    }
+    to {
+      -webkit-transform: none;
+      transform: none;
+    }
+  }
+
+ 

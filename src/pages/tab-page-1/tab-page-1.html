@@ -1,0 +1,55 @@
+<!---Settings TAB lauout-1-->
+<ion-header>
+    <ion-navbar>
+        <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+        <ion-title>Lịch công tác</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<!--Themes Time Line - Timeline With Cards  -->
+
+<ion-content>
+    <!-- <button ion-button (click)="testEvent()">tetsEvent</button> -->
+    <div class="time-title">{{d | date:'medium' }}{{reltime}} </div>
+    <table class="table-timeline">
+        <ion-list *ngFor="let p of params; let i= index">
+            <tr>
+                <td class="time">
+                    {{p.time}}
+                </td>
+                <td class="icon-timeline">
+                    <div>
+                        <ion-icon no-padding style="color:pink" name="radio-button-off"></ion-icon>
+                    </div>
+                </td>
+                <td rowspan="2" class="content-timeline">
+                    <div class="title-content">{{p.title}}
+                        <!-- <button ion-button expand="block" (click)="schedulelocalNotification()">schedulelocalNotification</button> -->
+                    </div>
+                    <div style="color: blue;">
+                        <ion-icon name="person"></ion-icon>{{p.person}}
+                    </div>
+                    <div style="color:red;">
+                        <ion-icon name="pin"></ion-icon>{{p.pin}}
+                    </div>
+                    <div style="color:lime;">
+                        <ion-icon name="contact"></ion-icon>{{p.contact}}
+                    </div>
+                </td>
+            </tr>
+            
+            <tr>
+                <td></td>
+                <td class="timeline">
+                    <div class="thanh-timeline"></div>
+                </td>
+            </tr>
+        </ion-list>
+    </table>
+    <!-- button test -->
+    <button ion-button expand="small" (click)="schedulelocalNotification()">schedulelocalNotification</button>
+    <!--  -->
+
+</ion-content>

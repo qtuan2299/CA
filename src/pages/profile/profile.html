@@ -1,0 +1,45 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>{{params}}</ion-title>
+    </ion-navbar>
+  </ion-header>
+  <!--Theme Profile - Profie With Avatar-->
+
+<ion-content>
+
+    <ion-grid >
+        <ion-row>
+        <ion-col col-12>
+
+            <ion-card padding box-shadow>
+
+                <ion-avatar>
+
+                    <img [src]="" alt="">
+                    
+                    
+                    
+                </ion-avatar>
+
+                <ion-card-content text-center>
+                    <ion-icon icon-small name="camera"></ion-icon>
+
+                    <h1>{{user.result.userName}}</h1>
+
+                    <p>{{user.result.surename}} {{user.result.name}}</p>
+                    <p>{{user.result.emailAddress}}</p>
+
+                </ion-card-content>
+
+            </ion-card>
+
+        </ion-col>
+
+    </ion-row>
+
+    </ion-grid>
+
+</ion-content>

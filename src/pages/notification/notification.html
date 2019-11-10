@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{params}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list reorder="true" (ionItemReorder)="reorderItems($event)">
+    <ion-item class="item-content" *ngFor="let items of page;let i=index" (click)="openPage(items)">
+      <div>
+        <table class="item-notification">
+          <tr>
+            <td>
+              <h3 class="content-notification">{{items.item}}</h3>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <p class="date-notification">{{items.time}}</p>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </ion-item>
+    </ion-list>
+</ion-content>
